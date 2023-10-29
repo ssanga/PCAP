@@ -3,7 +3,7 @@ class Vehicle:
     Vehicle is a type that describes a machine that help us travel.
     """
 
-    def __init__(self, distance_traveled = 0, unit = 'miles') -> None:
+    def __init__(self, distance_traveled = 0, unit = 'miles',**kwargs) -> None:
         """
         self is going to represent the instance of the class
         Customizes de initialization of the class
