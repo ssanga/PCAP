@@ -3,21 +3,19 @@ class Vehicle:
     Vehicle is a type that describes a machine that help us travel.
     """
 
-    default_tire = 'tire'
-
-    def __init__(self, engine, tires) -> None:
+    def __init__(self, distance_traveled = 0, unit = 'miles') -> None:
         """
         self is going to represent the instance of the class
         Customizes de initialization of the class
         """
-        self.engine = engine
-        self.tires = tires
+        self.distance_traveled = distance_traveled
+        self.unit = unit
 
-    @classmethod
-    def bicycle(cls, tires=None):
-        if not tires:
-            tires = [cls.default_tire, cls.default_tire]
-        return cls(engine= None, tires = tires)
+    # @classmethod
+    # def bicycle(cls, tires=None):
+    #     if not tires:
+    #         tires = [cls.default_tire, cls.default_tire]
+    #     return cls(engine= None, tires = tires)
     
     @staticmethod
     def example():
@@ -25,4 +23,4 @@ class Vehicle:
 
 
     def description(self):
-        print(f"A vehicle with a {self.engine} engine, and {self.tires} tires")
+        return f"A {self.__class__.__name__} that has travel {self.distance_traveled} {self.unit}"

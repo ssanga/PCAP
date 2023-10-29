@@ -1,7 +1,8 @@
+from bicycle import Bicycle
 from vehicle import Vehicle
 
-civic = Vehicle('4-cylinder', ['front-driver', 'front-passegner','rear-driver','rear-passenger'])
-civic.description()
+civic = Vehicle(100, 'miles')
+print(civic.description())
 
-bike = Vehicle.bicycle([1,2])
-bike.description()
+bike = Bicycle([1,2], 2, 'miles')
+print(bike.description())
